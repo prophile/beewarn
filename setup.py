@@ -23,6 +23,5 @@ setup(name='beewarn',
               'beewarn=beewarn.cli:run_cli'
           ]
       },
-      packages=['beewarn'],
-      test_suite='tests')
+      packages=['beewarn'])
 
