@@ -5,11 +5,13 @@ dependencies:
   pre:
     - sudo apt-get update
     - sudo apt-get install rpm
+    - sudo apt-get install alien
 test:
   post:
     - 'python setup.py sdist'
     - 'python setup.py bdist --formats=gztar,zip'
     - 'python setup.py bdist_rpm'
+    - 'alien --scripts --to-deb dist/*.rpm'
 general:
   artifacts:
     - dist
