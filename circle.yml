@@ -5,6 +5,7 @@ test:
   post:
     - 'python setup.py sdist'
     - 'python setup.py bdist --formats=gztar,zip'
+    - 'python setup.py bdist_rpm'
 general:
   artifacts:
     - dist
