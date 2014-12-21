@@ -11,7 +11,7 @@ test:
     - 'python setup.py sdist'
     - 'python setup.py bdist --formats=gztar,zip'
     - 'python setup.py bdist_rpm'
-    - 'alien --scripts --to-deb dist/*.rpm'
+    - 'sudo alien --scripts --to-deb dist/*.rpm'
 general:
   artifacts:
     - dist
