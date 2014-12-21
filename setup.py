@@ -17,5 +17,7 @@ setup(name='beewarn',
       long_description=description,
       url='https://github.com/prophile/beewarn',
       zip_safe=True,
-      packages=['beewarn'])
+      setup_requires=['nose >=1.0, <2.0'],
+      packages=['beewarn'],
+      test_suite='tests')
 
