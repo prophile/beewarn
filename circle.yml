@@ -1,6 +1,10 @@
 machine:
   python:
     version: 3.4.2
+dependencies:
+  pre:
+    - sudo apt-get update
+    - sudo apt-get install rpm
 test:
   post:
     - 'python setup.py sdist'
