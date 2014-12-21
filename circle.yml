@@ -5,13 +5,13 @@ dependencies:
   pre:
     - sudo apt-get update
     - sudo apt-get install rpm
-    - sudo apt-get install alien
+    - gem install fpm
 test:
   post:
     - 'python setup.py sdist'
     - 'python setup.py bdist --formats=gztar,zip'
     - 'python setup.py bdist_rpm'
-    - 'sudo alien --scripts --to-deb dist/*.rpm'
+    - 'cd dist ; fpm -s rpm -t deb -m "Alistair Lynn <arplynn@gmail.com>" *.rpm'
 general:
   artifacts:
     - dist
