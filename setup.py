@@ -18,6 +18,11 @@ setup(name='beewarn',
       url='https://github.com/prophile/beewarn',
       zip_safe=True,
       setup_requires=['nose >=1.0, <2.0'],
+      entry_points = {
+          'console_scripts': [
+              'beewarn=beewarn.cli:run_cli'
+          ]
+      },
       packages=['beewarn'],
       test_suite='tests')
 
