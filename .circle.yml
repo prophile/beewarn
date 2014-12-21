@@ -1,0 +1,11 @@
+machine:
+  python:
+    version: 3.4
+test:
+  post:
+    - 'python setup.py sdist'
+    - 'python setup.py bdist --formats=gztar,zip'
+general:
+  artifacts:
+    - dist
+
